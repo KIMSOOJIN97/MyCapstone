@@ -1,0 +1,29 @@
+<style>
+  div {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin-left: 30px;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    left: 20px;
+  }
+</style>
+
+{%extends 'main/top.html'%} {% block content %}
+
+<div>
+  {% for product in insta_list %}
+  <div>
+    <a href="{{product.cur_url}}">
+      <img src="{{product.img_path}}" />
+    </a>
+    <br /><br />
+    {{product.univ}}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
